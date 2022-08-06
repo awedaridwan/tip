@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --border-radius: 10px;
+}
+
+
+html, body{
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+.calc{
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem ;
+    border-radius:var(--border-radius);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.calc-left, .calc-right{
+    width: 50%;
+    align-self: stretch;
+    min-height: 100%;
+}
+
+.calc-left{
+    margin-right: 20px;
+}
+.cl-input{
+    margin-bottom: 2rem;
+}
+
+.cl-input label,
+.cl-tips-title{
+     color: hsl(184, 14%, 56%);
+     font-size: 0.8rem;
+     margin-bottom: 1rem;
+}
+/*  */
+.form-input{
+    width: 100%;
+    display: flex;
+    background-color: hsl(189, 41%, 97%);
+    padding: 0.1rem 0;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+.form-input:hover,
+.form-input:focus-within{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+ .form-input.inactive{
+   border: 2px solid rgba(255, 0, 0, );
+}
+
+.form-input input{
+    width: 100%;
+    border: none;
+    text-align: right;
+    background-color: transparent;
+    padding-right: 15px;
+    font-weight: 700;
+    color:  hsl(183, 100%, 15%);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label span{
+    display: none;
+    color: red;
+    float: right;
+    font-weight: bold;
+    padding-right: 8%;
+}
+
+
+.form-input input:focus{
+    outline:none;
+}
+.form-input span{
+    width: 45px;
+    text-align: center;
+    color: hsl(185, 41%, 84%);
+}
+.cl-tips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.cl-tip{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+.cl-tip.active{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(0, 0%, 100%);
+}
+.cl-tip-custom{
+    background-color: hsl(0, 0%, 100%);
+    color:  hsl(184, 14%, 56%);
+}
+
+
+.calc-right {
+    background-color: hsl(183, 100%, 15%);
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.tip-info .tip-title{
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 100%);
+}
+.tip-info .tip-subtitle{
+    font-size: 0.6rem;
+    color: hsl(189, 41%, 97%);
+    opacity: 0.5;
+}
+
+
+.tip-amount{
+    font-size: 2rem;
+    color:  hsl(172, 67%, 45%);
+    
+}
+
+.tip-reset-button{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 20%);
+    text-transform: uppercase;
+    padding: o.5rem 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+.tip-reset-button:hover{
+    background-color: hsl(172, 67%, 45%);
+    transition: 0.3s;
+}
+/* front end mentor */
+.attribution{
+  font-size: 11px;
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+ }
+
+ .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 760px) {
+      .calc{
+        flex-direction: column;
+      }
+      .calc-left, .calc-right{
+        width: 100%;
+        align-self: stretch;
+        min-height: 100%;
+      }
+    
+}
+
+
